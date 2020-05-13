@@ -23,6 +23,13 @@ struct Options {
     program: String,
 }
 
+enum Filter {}
+
+struct Ser {
+    current_filter: Filter,
+    pipeline: Vec<Filter>,
+}
+
 fn main() {
     let options = Options::from_args();
     println!("{:?}", options);
